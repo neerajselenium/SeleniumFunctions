@@ -1,0 +1,19 @@
+
+public class GeneraterRandomNumber {
+	
+	public static void main(String args[])
+	{
+		long num= (long)(Math.random()*100000 + 8000001499L);
+		System.out.println(num);
+		String s = Long.toString(num);
+		
+		System.out.println("stirng "+ s);
+		
+		System.out.println(s.charAt(0));
+		System.out.println("OTP IS "+ s.trim().substring(4,10));
+	
+		
+	}
+
+}
+
