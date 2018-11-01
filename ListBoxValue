@@ -1,0 +1,21 @@
+	public static void getValueFromListBox(String ele, String data)
+	{		
+	driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+	List<WebElement> elementCount = driver.findElements(By.xpath(ele));
+	
+	System.out.println("Elemine count ia ................"+ elementCount);
+		int iSize = elementCount.size();
+	 	for(int i =0; i<iSize ; i++){ 
+			String sValue = elementCount.get(i).getText();
+			System.out.println(sValue);
+			if(sValue.equalsIgnoreCase(data))
+			{
+				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+				elementCount.get(i).click();
+				break;
+				
+			}
+		}
+	 	
+	 	
+}
